@@ -6,4 +6,8 @@ Java Installation
 >java -version
 "1.8.0_45"
 
+
+echo $PATH
+/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/oracle/bin:/home/oracle/app/oracle/product/12.1.0/dbhome_1/bin:/usr/local/apache-ant-1.9.3/bin
+
 ------------------------------------------------------------------------------
