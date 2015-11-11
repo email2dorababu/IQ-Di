@@ -1,0 +1,57 @@
+oct24- u   h   g  
+1) java to sort objects, which method is used?
+equal(object), hashcode(object), compareto of comparable, all
+2) to release thread , what method is called
+sleep, notify, wait
+3) why serialization is required?
+to sort, to change object state,
+4) not an input format
+byteIF , text , Key-valueIF,SeqfileIF
+5) File in NN storing mapping of data blocks with File name is?
+dfsimage, nameimage, fs image, image
+6) can run Unix shall commands from hive?
+7) hive error when
+cast('abc' as int)
+return null, typecast exception, return 0, return empty string
+8) default delimiter in Hive
+;,/t,, ??
+9) pig wrong
+running pig scripts from cmd & from grunt
+declare defines a macro
+use pig script to place pig Latin script & pig commands in  a single file
+10)  commands to debug pig
+Execute , exec, error, throw
+11) format which is compression aggressive
+partition compression, record compressed, block compression, uncompressed
+12) group direct mode does not support
+Blob, longvarbinary, clob, all
+13)  update hive metastore When new portions updated in HDFS by put
+1.msck repair table table name
+Alter table table name
+both
+Add partitions commands on each portion newly added
+14) restrictions on create table as select
+Target cannot be partitioned,
+Target cannot be external table
+Target cannot be internal table
+All
+15) storage types in hive
+Text crc mpv, refile
+Hivetext, orc, ore, RCfile
+Text, rcfile, orc, hbase
+Text, xsd, meta, orc crc
+16)in parlance of Eric brewer
+CAP theorem - hbase is 
+CA,AP,CP,CAP not applicable
+17) talend  - how to transfer contest from main to child job
+Tmainjob, tchidjob, trransjob, none
+18) component in hive to write hive query in talend
+Thiveinput, thiveload, thiverow, thivecreatetable
+19)diff between ran and dense rank
+Rank give ordered data on one col alone
+Dense rank can be used on comp primary key
+Ran within ordered partition,
+Dense rank 
+
+20)composite key made up of
+Onecol, onesubkey,one foreign key, 2 or more col
