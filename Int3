@@ -1,0 +1,24 @@
+CapG- 24Jan2016
+by another friend:
+
+Hive
+How to process data stored in Text and ORC
+how to store data into ORC
+How to store MR output into ORC format
+UDFS and UDAFs in Hive
+Advantages of ORC file format
+difference between partitioning and bucketing
+
+
+Pig
+What are the different types of execution in Pig
+
+MR
+What are the compression formats available? How will you specify?
+How will you specify counters in MR
+
+sqoop-
+you have a transactional db and prod db..
+while updating the prod db, how will you check whether the data is latest one or not?
+how to load only a specified columns using sqoop?
+
