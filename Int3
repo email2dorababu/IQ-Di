@@ -21,4 +21,7 @@ sqoop-
 you have a transactional db and prod db..
 while updating the prod db, how will you check whether the data is latest one or not?
 how to load only a specified columns using sqoop?
-
+-----------------------------------------
+HIVE - how to perform UNION operation in Hive?
+Hive have only unoin all, then how not to have duplicates??
+Dora's Idea is to use  - FULL OUTER JOIN, that is equivalent to UNION????
