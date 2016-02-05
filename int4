@@ -1,0 +1,81 @@
+Cisco - internal company screening interview questions
+
+Core development in HBase,Hive,Spark,Pig. 
+Hive:
+ How do you do performance tuning in Hive? When your admin come back and tell you, your query is occupying lot of cluster resources. So how you tune your hive scripts?
+Partitioning- How do you select partitioning key? 
+What will be the problems with the partitions?
+You chose, the partition key properly,  did you hear about Over partitioning?
+What happens when your partition is having so many folders?
+What exactly NN store? 
+Where the metadata stored in NN? Who takes care of merging fsimage and editlogs and how?
+Is it mandatory to have SNN?
+Explain Yarn architecture. Why Yarn came into picture?
+Who will take care of cluster management in Hadoop 1.x??
+What are the daemons in Hadoop? In 1.x and 2.x??
+What is app master, and how many app masters will be there?
+Say now two users are using the cluster, and the end users are given the edge node and the end user will write the MR code. Both users use the same id. Say a user has launched some job in wrong manner, and asked you to delete the job. How can you kill the job?
+What are the schedulers available in Hadoop?
+What is the diff between fair and capacity scheduler?
+In Sqoop, what are the no of mappers launched in default?
+When you are loading the data from RDBMS, using sqoop, what sqoop will do internally?
+Sqoop spawn multiple maps, say you have 1 million records, now def 10 mappers launch? How Sqoop decides, which portion of the table goes to which mapper? What is the criteria for that splitting?
+Sqoop, say it is running on the edge node, and the source database say here mysql is also running on the same node. In that case will you use local host or you use IP, in the JDBC/ODBC connection?
+
+HBase- what are the componets?
+What is the region server?
+HBase Who decides, when you insert a data, simple put command,.. you have given, rowkey,cf,c, who decides where the record should go?
+Where the records? And What is WAL?
+Where exactly WALs are present? Is it in memory? Or disk?
+What is major compaction and minor compaction?
+What is compaction?
+Where exactly Hfiles are stored? Hdfs??
+What is the relation between region server and Hfiles?
+When you store the data in HDFS, NN,DN will take care of data, then what is the role of Region server / region ?
+What is the relation between regions,region servers? What is the role of region servers?
+When you try to fetch / insert the data, where the information is stored? 
+How the put/get knows which region server / region to search?
+When you get the data, using rowkey, where exactly you find info on which region you need to choose? Where this information is stored in the HBase server? You should know that which row key in which region, where the region is present in which region server? Where all the info/mapping  is stored? 
+Map Reduce
+What are the stages present?
+In a MR job, once the map is completed, the intermediate k-v pairs reaches the reducers.  It is made sure that, values of same key are passed to same reducer. Who does that work? How it happens? How it knows which key has to go for which reducer?
+How the no of mappers to be launched are decided in a MR job? 
+How will you decide the splits?  ( If your answer is InputFomat, then – Input format is the Java class, will the java class computes that?) which component computes the no of splits?
+I have two clusters, one is regular cluster and other one is backup/archive cluster.  How do you copy the data? Or make them sync? (tell me other than distcp?)
+When you go for map side join and when you go for reduce side join? 
+(Map side join, the other file should fit into memory??? No ..)
+How the reduce side join happens???
+If you have one small file and other is big file? Where that small file go?? Memory of what? 
+Who takes care of copying the small file into each machine ,i.e to the  task machine which runs the map task in data node? (distributed cache is just the mechanism, who takes care of copying the files? )
+How the copying is done? Some body should know that these are the machines my mappers are running and someone should give instructions to load the data into memory and machines?
+What are the nodes DN, NN etc?  how to you check them?
+Hive : What are the ways to connect to Hive? 
+Hive – emp table , How to remove the duplicates from the table?? You have to remove/eliminate all the duplicate rows from that table. Say one row repeated 10 times, how remove the remain 9 rows?
+Why rank function coming while deleting rows?  
+What explain command in Hive do?
+Where the table definitions store in Hive? 
+What are the different types of meta store? And what is a meta store?
+What is the diff between , embedded, local and remote metastores?
+-----------------------------------------|
+Shell script – When somebody gave the script, it showed permission denied. What will you do to run that?
+Explain Chmod?? What 700 is used, what permission you give to owner, group and others.
+Write command to rwx to owner, rw to group and no permissions to others
+PIG – What is relation, tuple and Bag?
+What are the data storage formats you have used in Hive?
+What is ORC file format? How it will store the data? Why it is used and its benefits?
+What are the compression formats? 
+What is meant by Splittable compression? Why we call that it is Splittable? 
+What if it is not splittable?
+Based on what you decide/choose the compression? 
+What is flatten will do? Explain with example?
+Difference between managed and external table? When you use what? 
+Say you have created a managed table and stored the data in the folder, now you have created external table around that internal table data.. after doing that you dropped the managed table.
+First, can we create the external table with the data of managed table?
+And if we have created external table, can we drop the managed table?
+If we dropped the managed table, whether the data will be deleted??
+-------------------------|
+Java, what is the difference between class not found exception and class deferred exception?
+Why serialization is used?
+What are the access modifiers and what the access modifier ‘transient?’
+
+
