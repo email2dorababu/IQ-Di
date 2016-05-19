@@ -35,5 +35,45 @@ SET hive.exce.parallel=true;   several queries executed on Hive make automatical
 you can use any extension to run hive scripts. for example
 hive -f scriptname.sh
 but using .hql is is the best practice so that you can differentiate this file from other files.
+The standard at Apache Hive project is to use .q
 
-5)
+5) How to set Reducers in MR(Yarn), pig and Hive?
+https://hadoopjournal.wordpress.com/2015/05/30/set-reducers-in-pig-hive-and-mapreduce/
+MR (yarn)
+-------
+-D mapreduce.job.reduces=XX
+conf.set("mapreduce.job.reduces", "4");  -- using configuration
+job.setNumReduceTasks(10); -- using Job
+Old version - mapred.reduce.tasks
+
+Pig: set no of reducers
+-----
+SET default_parallel XXX
+In a script, the value we set using the PARALLEL clause will override any value we specify through “SET default_parallel.”
+
+A = LOAD 'myfile' AS (t, u, v);
+B = GROUP A BY t PARALLEL 18;   --  Here 18 is number of reducer
+pig.exec.reducers.bytes.per.reducer – Defines the number of input bytes per reduce; default value is 1000*1000*1000 (1GB).
+
+Hive
+-----
+Set the number of reducer in HIVE:
+SET mapred.reduce.tasks=XX // In Hadoop 1.X
+SET mapreduce.job.reduces=XX // In Hadoop 2.X (YARN)
+
+Set this property before your hive query.
+
+Example:
+SET mapreduce.job.reduces=10;select count(*) from table1;
+
+Default is -1, with this, hive will choose the reducers based on the data other property, hive.exec.reducers.bytes.per.reducer
+Default Value: 1000000000, 1G, i.e 1G data one reducer
+
+
+
+To control the max reducers, (when the value is mapreduce.job.reduces -1)
+hive.exec.reducers.max
+Default Value: 999
+
+
+
