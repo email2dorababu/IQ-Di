@@ -26,3 +26,14 @@ https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/HDFSComman
 2) Precautions you take while copying data with DISCP
 https://hadoop.apache.org/docs/r2.7.2/hadoop-distcp/DistCp.html
 use -update to update the fiels with the latest version
+
+3)How to run 100 queries parallely ? 
+https://www.qubole.com/blog/big-data/5-tips-for-efficient-hive-queries/?nabe=5695374637924352:0&utm_referrer=https%3A%2F%2Fwww.google.co.in%2F
+SET hive.exce.parallel=true;   several queries executed on Hive make automatically use of MR parallel execution
+
+4) can hive script should be of .hql extension or any extension?
+you can use any extension to run hive scripts. for example
+hive -f scriptname.sh
+but using .hql is is the best practice so that you can differentiate this file from other files.
+
+5)
