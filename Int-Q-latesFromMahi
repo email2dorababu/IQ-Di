@@ -106,3 +106,12 @@ https://books.google.co.in/books?id=Wu_xeGdU4G8C&pg=PA167&lpg=PA167&dq=what+is+t
 
 10) Tuning Mapreduce - 
 See Tuning Checklist in hadoop definitive guide.
+
+11) Hadoop Command reference Very Good 
+http://www.thegeekstuff.com/2015/02/hadoop-command-reference/
+
+12) to get the YARN applications running
+yarn application -list
+yarn application -kill appid
+yarn application -movetoqueue appid -queue queuename
+yarn application -status appid
