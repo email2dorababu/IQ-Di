@@ -124,3 +124,8 @@ http://stackoverflow.com/questions/14338495/import-data-into-hive-containing-whi
 14) Compresson formats used in your project, and what compression techniques are used ?
 
 
+http://hortonworks.com/blog/5-ways-make-hive-queries-run-faster/
+https://cwiki.apache.org/confluence/display/Hive/CompressedStorage
+http://www.cloudera.com/documentation/archive/cdh/4-x/4-3-0/CDH4-Installation-Guide/cdh4ig_topic_23_5.html
+
+Very good - http://hadooptutorial.info/hive-performance-tuning/    
