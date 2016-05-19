@@ -30,6 +30,7 @@ use -update to update the fiels with the latest version
 3)How to run 100 queries parallely ? 
 https://www.qubole.com/blog/big-data/5-tips-for-efficient-hive-queries/?nabe=5695374637924352:0&utm_referrer=https%3A%2F%2Fwww.google.co.in%2F
 SET hive.exce.parallel=true;   several queries executed on Hive make automatically use of MR parallel execution
+Set this property in hive-site.xml
 
 4) can hive script should be of .hql extension or any extension?
 you can use any extension to run hive scripts. for example
@@ -75,5 +76,33 @@ To control the max reducers, (when the value is mapreduce.job.reduces -1)
 hive.exec.reducers.max
 Default Value: 999
 
+6) How to find failed queries? 
+----------------------------
+see - http://stackoverflow.com/questions/35902860/track-success-or-failure-for-hive-queries-running-through-shell-script
+The exit code rom the previous command is stored in the variable $?
 
+#!/bin/bash  
+HQLSource='/home/hql/'  
+if hive -f "$HQLSource/query1.hql"
+then
+    echo Query 1 succeeded
+else
+    echo Query 1 failed
+fi
 
+7) what is vectorized exectuion in Hive/
+https://cwiki.apache.org/confluence/display/Hive/Vectorized+Query+Execution
+http://hortonworks.com/blog/5-ways-make-hive-queries-run-faster/
+https://www.qubole.com/blog/big-data/hive-best-practices/?nabe=5695374637924352:0&utm_referrer=https%3A%2F%2Fwww.google.co.in%2F
+
+8) list out all the job
+hadoop job -list all
+
+use mapred instead of hadoop.
+9) how to get specif counter value??
+
+hadoop job -counter jobid groupname countername
+https://books.google.co.in/books?id=Wu_xeGdU4G8C&pg=PA167&lpg=PA167&dq=what+is+the+location+of+job+output+directory+in+hadoop&source=bl&ots=i8zPVCP7Ys&sig=MoQ7M-7jdbP6Dkc2J7lfKrAllL4&hl=en&sa=X&ved=0ahUKEwiJ_amukubMAhUlw4MKHayJDWgQ6AEIRDAG#v=onepage&q=what%20is%20the%20location%20of%20job%20output%20directory%20in%20hadoop&f=false
+
+10) Tuning Mapreduce - 
+See Tuning Checklist in hadoop definitive guide.
