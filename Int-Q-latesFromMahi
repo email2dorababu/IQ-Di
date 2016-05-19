@@ -18,7 +18,11 @@ Where is counters information is stored?
 How to check a file, on what datanodes it is stored?
 ---------------------------------------------------
 Date 19May2016
-Q1 -Check the block locations of each block
+1) -Check the block locations of each block
 hadoop fsck filename/foldername -files -blocks -locations
 hadoop is dpricated, use hdfs fsck.
 https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/HDFSCommands.html#fsck
+
+2) Precautions you take while copying data with DISCP
+https://hadoop.apache.org/docs/r2.7.2/hadoop-distcp/DistCp.html
+use -update to update the fiels with the latest version
