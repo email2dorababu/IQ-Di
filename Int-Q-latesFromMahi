@@ -128,4 +128,8 @@ http://hortonworks.com/blog/5-ways-make-hive-queries-run-faster/
 https://cwiki.apache.org/confluence/display/Hive/CompressedStorage
 http://www.cloudera.com/documentation/archive/cdh/4-x/4-3-0/CDH4-Installation-Guide/cdh4ig_topic_23_5.html
 
-Very good - http://hadooptutorial.info/hive-performance-tuning/    
+Very good - http://hadooptutorial.info/hive-performance-tuning/  
+
+15) very good optimization:
+
+https://www.mapr.com/blog/what-kind-hive-table-best-your-data
