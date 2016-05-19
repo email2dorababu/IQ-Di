@@ -1,0 +1,17 @@
+19/May/2016
+
+1. How to transfer data from two data centers
+2. what you do when data transfer is failed while copying the data
+
+
+Hive:
+
+
+Pig:
+Difference between group and cogroup
+
+MR
+how to run all small files as one MR program? 
+Where is counters information is store?
+
+How to check a file, on what namenodes it is stored?
