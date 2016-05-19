@@ -135,3 +135,19 @@ https://www.packtpub.com/books/content/making-most-your-hadoop-data-lake-part-1-
 15) very good optimization:
 
 https://www.mapr.com/blog/what-kind-hive-table-best-your-data
+
+16) How do you schedule a script in crontab ? 
+is it unix shell script or direct HQL file you can give as input?
+
+17) Is your cluster in single location or multiple locations?
+18) what is your cluster configurations?
+19) what are the versions of MR,Hive,Pig and etc components using in your project and what are the latest versions available?
+Ans) depends on the distribution...
+20) how do you upgrade a distribution(for admin...)
+how do you upgrade your different versions of components?
+21) can different versions of same components like hive and pig can coexist in a cluster???
+
+
+
+22) When an external table is dropped, how do you get the metadata back to the schema???
+23) you performed Sqoop import to Hive, The table is not showing in hive, how you debug??
