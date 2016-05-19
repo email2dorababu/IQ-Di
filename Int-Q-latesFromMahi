@@ -115,3 +115,12 @@ yarn application -list
 yarn application -kill appid
 yarn application -movetoqueue appid -queue queuename
 yarn application -status appid
+
+13) load data with uneven spaces in between them into hive/pig.
+
+https://martin.atlassian.net/wiki/pages/viewpage.action?pageId=21299205
+http://stackoverflow.com/questions/14338495/import-data-into-hive-containing-whitespace
+
+14) Compresson formats used in your project, and what compression techniques are used ?
+
+
