@@ -160,3 +160,13 @@ how do you upgrade your different versions of components?
 2) What is the difference between sort by / order by / distribute by / cluster by
 
 3) what is CLUSTER"ED" by and SORT"ED" by in DDL ?? (note that these are different from Cluster by and sort by which is used in DML), here i am asking in DDL not in DML.
+
+--------------------
+Hive questions from viswa
+1. When the value is empty in a file, then i need to show it as null.
+Text file by setting serde properties, we can do that
+But in ORC, eventhough we applied any thing , i.e loaidng from text format using UDFs is also not working, still space is appearing as space, nulls are not coming in ORC.
+so who to do showrefer : https://orc.apache.org/docs/indexes.html
+My solution is run a map only job to convert spaces in to nulls and output format as ORC, but ORC is not supported in MR directly.
+What is the solution??? i have more than 70 files like that
+the problem came in UAT stage.
