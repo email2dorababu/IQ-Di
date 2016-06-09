@@ -151,3 +151,12 @@ how do you upgrade your different versions of components?
 
 22) When an external table is dropped, how do you get the metadata back to the schema???
 23) you performed Sqoop import to Hive, The table is not showing in hive, how you debug??
+
+
+------------------------------------
+9thJuly2016
+1) How to do incremental loads in Hive?
+(ans transactions are now supported on ORC format) 
+2) What is the difference between sort by / order by / distribute by / cluster by
+
+3) what is CLUSTER"ED" by and SORT"ED" by in DDL ?? (note that these are different from Cluster by and sort by which is used in DML), here i am asking in DDL not in DML.
