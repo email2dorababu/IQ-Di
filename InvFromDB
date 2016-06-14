@@ -1,0 +1,9 @@
+14Jun16
+1. How to set the configuration so that it accepts -D in generic command line options.
+use this.getConf() in job instead of new Configuration().
+2. How to provide a folder path as FIF?
+We can provide the directory as input to FIF , but it fails when it contains subfolders.
+Try setting below lines.
+/* This line is to accept input recursively */
+		FileInputFormat.setInputDirRecursive(job, true);
+		http://blog.puneethabm.in/custom-partitioner-in-mapreduce-using-new-hadoop-api-2/
