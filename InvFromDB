@@ -11,6 +11,9 @@ Try setting below lines.
 3. Custom Partitioner:
 Create a partition for each letter
 	http://blog.puneethabm.in/custom-partitioner-in-mapreduce-using-new-hadoop-api-2/
+	
+and very good explanation of return 0, why modulo etc??
+https://hadooptutorial.wikispaces.com/Custom+partitioner
 ------------------------------------------------------------------------
 	CustomPartitioner:
 	if(numReduceTask==0){
