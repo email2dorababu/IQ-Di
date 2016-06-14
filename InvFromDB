@@ -7,3 +7,7 @@ Try setting below lines.
 /* This line is to accept input recursively */
 		FileInputFormat.setInputDirRecursive(job, true);
 		http://blog.puneethabm.in/custom-partitioner-in-mapreduce-using-new-hadoop-api-2/
+
+3. Custom Partitioner:
+Create a partition for each letter
+	http://blog.puneethabm.in/custom-partitioner-in-mapreduce-using-new-hadoop-api-2/
