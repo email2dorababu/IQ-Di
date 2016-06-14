@@ -11,3 +11,41 @@ Try setting below lines.
 3. Custom Partitioner:
 Create a partition for each letter
 	http://blog.puneethabm.in/custom-partitioner-in-mapreduce-using-new-hadoop-api-2/
+------------------------------------------------------------------------
+	CustomPartitioner:
+	if(numReduceTask==0){
+			return 0;
+		}
+		int char1;
+		
+		 char1=(int) key.toString().toLowerCase().charAt(0);
+		int partNumber=0;
+		if (char1>=97 && char1< 110){  // a to m
+			partNumber=1%numReduceTask;
+		}else if (char1>=110&& char1<=122){ //m to z
+			partNumber=2%numReduceTask;
+		}else partNumber=0;
+		
+		return partNumber;
+		// to this to work, you give numReduceTask=3
+	
+		//job.setNumReduceTasks(27);  //26 for letters and one for remaining
+		/*Delete output filepath if already exists*/
+		/* FileSystem fs = FileSystem.newInstance(getConf());
+
+		if (fs.exists(outputFilePath)) {
+			fs.delete(outputFilePath, true);
+		} */
+		
+		/* 
+		 
+		 public int getPartition(Text key, IntWritable value, int numPartitions) {
+		String word = key.toString();
+		char letter = word.toLowerCase().charAt(0);
+		if((int) letter >96 && (int) letter <=122){
+		return (int) letter - 96;  // so a/A will get part 1
+	}else return 0;
+		 
+		 * 
+		 */
+------------------------------------------------------------------------
