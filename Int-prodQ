@@ -3,7 +3,7 @@
 nohup  sh abc.sh > xyz.log 2>&1  &
 
 1) what is nohup ?
-
+http://stackoverflow.com/questions/15595374/whats-the-difference-between-nohup-and-ampersand
 and
 
 2) what is 2>&1
