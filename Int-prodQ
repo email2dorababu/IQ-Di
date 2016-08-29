@@ -1,0 +1,10 @@
+29/8/2016
+
+nohup  sh abc.sh > xyz.log 2>&1  &
+
+1) what is nohup ?
+
+and
+
+2) what is 2>&1
+http://stackoverflow.com/questions/818255/in-the-shell-what-does-21-mean
